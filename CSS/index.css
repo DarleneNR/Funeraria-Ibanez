@@ -1,0 +1,190 @@
+/* Basic styling */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #f1f1f1;
+}
+nav {
+  background: #a5d351;
+  /* background: #97b06b; */
+  padding: 0px 25px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: white;
+  /* font-family: "Georgia, Times, Times New Roman, serif"; */
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: large;
+}
+a:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* Submenu: Nuestros Servicios */
+.dropdown {
+  order: 1;
+}
+.nav-link {
+  color: white;
+}
+.nav-link:focus, .nav-link:hover{
+  color: black;
+  text-decoration: none;
+}
+.dropdown-item {
+  display: -webkit-inline-box;
+  width: 100%;
+  padding: 0.25rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: #595b5c;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.logo a,
+.toggle a {
+  font-size: 20px;
+}
+.button.secondary {
+  border-bottom: 1px #444 solid;
+}
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:center;
+}
+.toggle {
+  order: 1;
+}
+.item.button {
+  order: 5;
+}
+.button a {
+  padding: 7px;
+  background: teal;
+  border: 1px #006d6d solid;
+}
+.item {
+  width: 100%;
+  text-align: center;
+  order: 3;
+  display: none;
+
+}
+.item.active {
+  display: block;
+}
+
+/* Tablet menu */
+@media all and (min-width: 600px) {
+  .menu {
+    justify-content: center;
+  }
+  .logo {
+    flex: 1;
+  }
+  .toggle {
+    flex: 1;
+    text-align: right;
+  }
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+  .toggle {
+    order: 2;
+  }
+  .button.secondary {
+    border: 0;
+  }
+  .button a {
+    padding: 7.5px 15px;
+    background: teal;
+    border: 1px #006d6d solid;
+  }
+  .button.secondary a {
+    background: transparent;
+  }
+  .button a:hover {
+    text-decoration: none;
+  }
+  .button:not(.secondary) a:hover {
+    background: #006d6d;
+    border-color: #005959;
+  }
+  .button.secondary a:hover {
+    color: #ddd;
+  }
+}
+/* Desktop menu */
+@media all and (min-width: 900px) {
+  .item {
+    display: block;
+    width: auto;
+  }
+  .toggle {
+    display: none;
+  }
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+  }
+  .button {
+    order: 2;
+  }
+  .menu li {
+    padding: 15px 10px;
+  }
+  .menu li.button {
+    padding-right: 0;
+  }
+}
+
+/* Aviso de Contrato Digital */
+.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+}
+
+#back-info-contratoDigital {
+  background: linear-gradient(to bottom, rgba(196, 200, 206, 0.568), rgba(133, 152, 155, 0.486), rgba(149, 161, 173, 0.582)), url(https://i.pinimg.com/564x/48/1e/12/481e12e3144cbe90754457bbfcf53804.jpg);
+}
+
+#textoCompletoCD {
+  text-align: center;
+}
+
+#text1-CD {
+  font-family: "Georgia";
+}
+
+#text2-CD {
+  font-family: "Gill Sans";
+}
