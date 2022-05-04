@@ -84,7 +84,7 @@ a:hover {
 }
 .button a {
   padding: 7px;
-  background: teal;
+  background: rgb(3, 133, 133);
   border: 1px #006d6d solid;
 }
 .item {
@@ -173,18 +173,46 @@ a:hover {
   width: 100% !important;
 }
 
-#back-info-contratoDigital {
-  background: linear-gradient(to bottom, rgba(196, 200, 206, 0.568), rgba(133, 152, 155, 0.486), rgba(149, 161, 173, 0.582)), url(https://i.pinimg.com/564x/48/1e/12/481e12e3144cbe90754457bbfcf53804.jpg);
+.dj-banner {
+  /* background: linear-gradient(to bottom, rgba(196, 200, 206, 0.568), rgba(133, 152, 155, 0.486), rgba(149, 161, 173, 0.582)), url(https://i.pinimg.com/564x/89/62/40/89624062d39214d952236b6d5e4b3f91.jpg); */
+  background-image: url(/IMG/FirmaDigital.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
+  margin-top: -16px;
+}
+.dj-banner .dj-bg img{display: block; margin: 20px auto; padding: 20px 0;}
+@media screen and (min-width:768px){
+  .dj-banner .dj-bg img{margin-right: 100px;}
+  .dj-banner .dj-text{position: absolute; top: 50%; left: 10%; transform: translate(-10%, -50%); width: 50%; text-align: left;}
+  .dj-banner .dj-text h1{font-size: calc(2*1.5vw);}
+  .dj-banner .dj-text p{font-size: calc(1.2*1.5vw);}
 }
 
 #textoCompletoCD {
   text-align: center;
+  padding: 20%;
+}
+
+.bgText{
+  text-shadow: rgba(92, 92, 92, 0.1) -1px 0, rgba(0,0,0,0.1) 0 -1 px,
+   rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
+   rgba(0,0,0,0.1) -1px -1px, rgba(255,255,255,0.1) 1px 1px;
+  color: rgb(255, 255, 255);
+  background: rgba(150, 150, 150, 0.459);
 }
 
 #text1-CD {
-  font-family: "Georgia";
+  font-family: "Gill Sans";
 }
 
 #text2-CD {
-  font-family: "Gill Sans";
+  font-family: "Georgia";
+  font-weight: bold;
+}
+
+/* Tipos de Servicios */
+#TiposDeServicios {
+  background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
+}
+
+#tituloTiposServicios {
+  align-content: center;
 }
