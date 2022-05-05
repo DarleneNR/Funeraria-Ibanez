@@ -209,10 +209,20 @@ a:hover {
 }
 
 /* Tipos de Servicios */
-#TiposDeServicios {
+#bgTiposServicios {
   background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
 }
 
-#tituloTiposServicios {
-  align-content: center;
+#bgTituloNS {
+  padding: 5%;
+}
+
+.TituloNS {
+  text-align: center;
+  font-family: "Georgia";
+}
+.SubTituloNS {
+  text-align: center;
+  font-family: "Gill Sans";
+  color: #595b5c;
 }
