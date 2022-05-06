@@ -211,10 +211,12 @@ a:hover {
 /* Tipos de Servicios */
 #bgTiposServicios {
   background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
+  padding-top: 5%;
+  padding-bottom: 9%;
 }
 
 #bgTituloNS {
-  padding: 5%;
+  padding-bottom: 5%;
 }
 
 .TituloNS {
@@ -225,4 +227,35 @@ a:hover {
   text-align: center;
   font-family: "Gill Sans";
   color: #595b5c;
+}
+
+.img-contenedor img{
+-webkit-transition:all .9s ease; /* Safari y Chrome */
+-moz-transition:all .9s ease; /* Firefox */
+-o-transition:all .9s ease; /* IE 9 */
+-ms-transition:all .9s ease; /* Opera */
+width:100%;
+}
+.img-contenedor:hover img {
+-webkit-transform:scale(1.13);
+-moz-transform:scale(1.13);
+-ms-transform:scale(1.13);
+-o-transform:scale(1.13);
+transform:scale(1.13);
+}
+
+/* Sobre Nosotros */
+.bgSobreNosotros {
+  padding: 10% 20%;
+}
+
+#TituloSN {
+  text-align: center;
+  font-family: "Georgia";
+}
+
+#TextSobreNosotros {
+  font-family: "Gill Sans";
+  font-size: x-large;
+  padding: 5%;
 }
