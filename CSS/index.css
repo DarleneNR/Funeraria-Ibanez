@@ -6,7 +6,7 @@
 }
 body {
   font-family: sans-serif;
-  background: #f1f1f1;
+  background: #f8f8f8;
 }
 nav {
   background: #a5d351;
@@ -258,4 +258,39 @@ transform:scale(1.13);
   font-family: "Gill Sans";
   font-size: x-large;
   padding: 5%;
+}
+
+/* Escríbenos */
+#bgEscribenos {
+  background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
+  padding-top: 5%;
+  padding-bottom: 9%;
+}
+
+#TituloE {
+  text-align: center;
+  font-family: "Georgia";
+}
+
+/* Formulario de Contacto */
+.control-label{
+  text-align: center;
+}
+
+.form-control{
+}
+
+#submit{
+  border-radius: 5px;
+  background: rgb(33 37 41);
+  height:44px; color: white;
+  width: 175px; text-align: center;
+  font-size: 17px;
+  padding: 10px 0;
+  border: none;
+  font-family: "Georgia";
+}
+
+#TituloC {
+
 }
