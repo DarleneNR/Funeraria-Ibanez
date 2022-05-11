@@ -261,7 +261,10 @@ transform:scale(1.13);
 }
 
 /* Escríbenos */
-#bgEscribenos {
+.row {
+  margin-left: 0px;
+}
+#bgEscribenosConvenios{
   background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
   padding-top: 5%;
   padding-bottom: 9%;
@@ -277,9 +280,6 @@ transform:scale(1.13);
   text-align: center;
 }
 
-.form-control{
-}
-
 #submit{
   border-radius: 5px;
   background: rgb(33 37 41);
@@ -292,5 +292,16 @@ transform:scale(1.13);
 }
 
 #TituloC {
+  text-align: center;
+  font-family: "Georgia";
+  padding-bottom: 15%;
+}
 
+/* Convenios */
+.ImgCarrusel {
+  margin-left: 19%;
+  margin-right: 15%;
+}
+
+.TextoCarrusel {
 }
