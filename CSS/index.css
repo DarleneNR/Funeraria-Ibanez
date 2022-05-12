@@ -19,14 +19,16 @@ ul {
 a {
   color: white;
   /* font-family: "Georgia, Times, Times New Roman, serif"; */
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: bold;
   text-decoration: none;
   font-size: large;
 }
+
 a:hover {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  /* border-bottom: 2px solid rgb(36, 36, 36); */
 }
 
 /* Submenu: Nuestros Servicios */
@@ -278,6 +280,7 @@ transform:scale(1.13);
 /* Formulario de Contacto */
 .control-label{
   text-align: center;
+  font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
 #submit{
@@ -303,5 +306,33 @@ transform:scale(1.13);
   margin-right: 15%;
 }
 
-.TextoCarrusel {
+/* Footer  */
+.bgFooter {
+  width:100%;
+  margin:0 auto;
+  background-color: #a5d351;
+  position: relative;
+  clear: both;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.TituloFooter {
+  text-align: left;
+  font-family: "Georgia";
+  padding-left: 20px;
+}
+
+/* Copyright */
+.footer-minimal .rights {
+    color: rgba(255, 255, 255, 0.5);
+}
+.footer-minimal * + .rights {
+    padding: 10px 0px 50px;
+}
+p.rights {
+    font-size: 14px;
+    color: rgba(21, 21, 21, 0.8);
+    font-family: "Poppins", sans-serif;
 }
