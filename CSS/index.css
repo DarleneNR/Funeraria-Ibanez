@@ -301,9 +301,9 @@ transform:scale(1.13);
 }
 
 /* Convenios */
-.ImgCarrusel {
-  margin-left: 19%;
-  margin-right: 15%;
+img.d-block {
+  margin: auto;
+  display: block
 }
 
 /* Footer  */
