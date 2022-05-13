@@ -324,15 +324,29 @@ img.d-block {
   padding-left: 20px;
 }
 
+.listFooter {
+  text-align: left;
+}
+
+i {
+  font-size: 25px;
+}
+
+.linkFooter {
+  color:rgb(43, 43, 43);
+  font-family: "Georgia";
+  font-weight: lighter;
+}
+
 /* Copyright */
 .footer-minimal .rights {
-    color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
 }
 .footer-minimal * + .rights {
-    padding: 10px 0px 50px;
+  padding: 10px 0px 50px;
 }
 p.rights {
-    font-size: 14px;
-    color: rgba(21, 21, 21, 0.8);
-    font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: rgba(21, 21, 21, 0.8);
+  font-family: "Poppins", sans-serif;
 }
