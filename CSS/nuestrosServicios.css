@@ -168,46 +168,13 @@ a:hover {
   }
 }
 
-/* Aviso de Contrato Digital */
-.container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  width: 100% !important;
-}
-
-.dj-banner {
-  /* background: linear-gradient(to bottom, rgba(196, 200, 206, 0.568), rgba(133, 152, 155, 0.486), rgba(149, 161, 173, 0.582)), url(https://i.pinimg.com/564x/89/62/40/89624062d39214d952236b6d5e4b3f91.jpg); */
-  background-image: url(/IMG/FirmaDigital.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
-  margin-top: -16px;
-}
-.dj-banner .dj-bg img{display: block; margin: 20px auto; padding: 20px 0;}
-@media screen and (min-width:768px){
-  .dj-banner .dj-bg img{margin-right: 100px;}
-  .dj-banner .dj-text{position: absolute; top: 50%; left: 10%; transform: translate(-10%, -50%); width: 50%; text-align: left;}
-  .dj-banner .dj-text h1{font-size: calc(2*1.5vw);}
-  .dj-banner .dj-text p{font-size: calc(1.2*1.5vw);}
-}
-
-#textoCompletoCD {
-  text-align: center;
-  padding: 20%;
-}
-
-.bgText{
-  text-shadow: rgba(92, 92, 92, 0.1) -1px 0, rgba(0,0,0,0.1) 0 -1 px,
-   rgba(255,255,255,0.1) 1px 0, rgba(255,255,255,0.1) 0 1px,
-   rgba(0,0,0,0.1) -1px -1px, rgba(255,255,255,0.1) 1px 1px;
-  color: rgb(255, 255, 255);
-  background: rgba(150, 150, 150, 0.459);
-}
-
-#text1-CD {
-  font-family: "Gill Sans";
-}
-
-#text2-CD {
-  font-family: "Georgia";
-  font-weight: bold;
+/* Inicio Nuestros Servicios */
+.inicioNuestrosServicios {
+    text-align: center;
+    font-family: "Georgia";
+    color: rgba(76, 77, 78, 0.925);
+    padding-top: 30px;
+    padding-bottom: 100px;
 }
 
 /* Tipos de Servicios */
@@ -215,20 +182,12 @@ a:hover {
   background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
   padding-top: 5%;
   padding-bottom: 9%;
-}
-
-#bgTituloNS {
-  padding-bottom: 5%;
+  margin-top: -16px;
 }
 
 .TituloNS {
   text-align: center;
   font-family: "Georgia";
-}
-.SubTituloNS {
-  text-align: center;
-  font-family: "Gill Sans";
-  color: #595b5c;
 }
 
 .img-contenedor img{
@@ -246,65 +205,16 @@ width:100%;
 transform:scale(1.13);
 }
 
-/* Sobre Nosotros */
-.bgSobreNosotros {
-  padding: 10% 20%;
+.desc-servicio {
+    text-align: center;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: 'Questrial', sans-serif;
+    font-size: large;
 }
 
-#TituloSN {
-  text-align: center;
-  font-family: "Georgia";
-}
 
-#TextSobreNosotros {
-  font-family: "Gill Sans";
-  font-size: x-large;
-  padding: 5%;
-}
-
-/* Escríbenos */
-.row {
-  margin-left: 0px;
-}
-#bgEscribenosConvenios{
-  background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
-  padding-top: 5%;
-  padding-bottom: 9%;
-}
-
-#TituloE {
-  text-align: center;
-  font-family: "Georgia";
-}
-
-/* Formulario de Contacto */
-.control-label{
-  text-align: center;
-  font-family: Comic Sans MS, Comic Sans, cursive;
-}
-
-#submit{
-  border-radius: 5px;
-  background: rgb(33 37 41);
-  height:44px; color: white;
-  width: 175px; text-align: center;
-  font-size: 17px;
-  padding: 10px 0;
-  border: none;
-  font-family: "Georgia";
-}
-
-#TituloC {
-  text-align: center;
-  font-family: "Georgia";
-  padding-bottom: 15%;
-}
-
-/* Convenios */
-img.d-block {
-  margin: auto;
-  display: block
-}
 
 /* Footer  */
 .bgFooter {
