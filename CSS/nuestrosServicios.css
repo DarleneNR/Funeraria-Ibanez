@@ -206,15 +206,13 @@ transform:scale(1.13);
 }
 
 .desc-servicio {
-    text-align: center;
-    padding-top: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
-    font-family: 'Questrial', sans-serif;
-    font-size: large;
+  text-align: center;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: 'Questrial', sans-serif;
+  font-size: large;
 }
-
-
 
 /* Footer  */
 .bgFooter {
