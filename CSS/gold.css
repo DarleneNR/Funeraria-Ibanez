@@ -170,7 +170,7 @@
 
 /* Información */
 #bgInformacion {
-  background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
+  background-image: url(../IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
   padding-top: 5%;
   padding-bottom: 9%;
   margin-top: -16px;

@@ -177,7 +177,7 @@ a:hover {
 
 .dj-banner {
   /* background: linear-gradient(to bottom, rgba(196, 200, 206, 0.568), rgba(133, 152, 155, 0.486), rgba(149, 161, 173, 0.582)), url(https://i.pinimg.com/564x/89/62/40/89624062d39214d952236b6d5e4b3f91.jpg); */
-  background-image: url(/IMG/FirmaDigital.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
+  background-image: url(../IMG/FirmaDigital.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
   margin-top: -16px;
 }
 .dj-banner .dj-bg img{display: block; margin: 20px auto; padding: 20px 0;}
@@ -212,7 +212,7 @@ a:hover {
 
 /* Tipos de Servicios */
 #bgTiposServicios {
-  background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
+  background-image: url(../IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
   padding-top: 5%;
   padding-bottom: 9%;
 }
@@ -267,7 +267,7 @@ transform:scale(1.13);
   margin-left: 0px;
 }
 #bgEscribenosConvenios{
-  background-image: url(/IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
+  background-image: url(../IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
   padding-top: 5%;
   padding-bottom: 9%;
 }

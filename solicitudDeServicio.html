@@ -56,7 +56,7 @@
                 <div class="col-md-8 col-sm-8 col-xs-8">
 
                     <!-- Formulario de Contacto -->
-                    <form class="form-horizontal" class="contacto" name="contacto" action="" method="post">
+                    <form class="form-horizontal" class="contacto" name="contacto" id ="contacto" method="post" action="formSolicitudServicio.php">
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <label for="name" class="control-label">Nombre completo</label>
@@ -75,11 +75,11 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <label for="servicio" class="control-label">Tipo de Servicio</label>                                   
-                                <select class="form-select">
-                                    <option>Servicio Standard</option>
-                                    <option>Servicio Tradicional</option>
-                                    <option>Servicio Premium</option>
-                                    <option>Servicio Gold</option>
+                                <select class="form-select" name="tipoServicio" id="tipoServicio">
+                                    <option value="Servicio Standard">Servicio Standard</option>
+                                    <option value="Servicio Tradicional">Servicio Tradicional</option>
+                                    <option value="Servicio Premium">Servicio Premium</option>
+                                    <option value="Servicio Gold">Servicio Gold</option>
                                 </select>
                             </div>
                         </div>
