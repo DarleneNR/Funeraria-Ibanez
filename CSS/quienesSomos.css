@@ -260,13 +260,38 @@ p i:hover {
 }
 
 .convenio1 {
-
+  padding-bottom: 30px;
 }
 
 .convenio1 img {
-  width: 200px;
-  height: 160px;
+  width: 220px;
+  height: 180px;
   display: inline-block;
+}
+
+div.borde-titulo {
+  margin-top:20px;
+  width: 100%;
+  border: solid 2px #ccc;
+  border-radius: 15px;
+}
+
+h1.titulo-encima {
+  width: 210px;
+  font-size:18px;
+  margin-top:-12px;
+  margin-left:7px;
+  background:rgb(221, 221, 221);
+  text-align: center;
+  font-family: "Georgia";
+}
+
+.convenio2 img {
+  width: 220px;
+  height: 180px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 /* Footer  */
