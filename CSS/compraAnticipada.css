@@ -1,0 +1,221 @@
+/* Basic styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: sans-serif;
+    background: #f8f8f8;
+  }
+  nav {
+    background: #a5d351;
+    /* background: #97b06b; */
+    padding: 0px 25px;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    color: white;
+    /* font-family: "Georgia, Times, Times New Roman, serif"; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: large;
+  }
+  
+  a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    /* border-bottom: 2px solid rgb(36, 36, 36); */
+  }
+  
+  /* Submenu: Nuestros Servicios */
+  .dropdown {
+    order: 1;
+  }
+  .nav-link {
+    color: white;
+  }
+  .nav-link:focus, .nav-link:hover{
+    color: black;
+    text-decoration: none;
+  }
+  .dropdown-item {
+    display: -webkit-inline-box;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #595b5c;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+  }
+  
+  .logo a:hover {
+    text-decoration: none;
+  }
+  .menu li {
+    font-size: 16px;
+    padding: 15px 5px;
+    white-space: nowrap;
+  }
+  .logo a,
+  .toggle a {
+    font-size: 20px;
+  }
+  .button.secondary {
+    border-bottom: 1px #444 solid;
+  }
+  /* Mobile menu */
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+  }
+  .toggle {
+    order: 1;
+  }
+  .item.button {
+    order: 5;
+  }
+  .button a {
+    padding: 7px;
+    background: rgb(3, 133, 133);
+    border: 1px #006d6d solid;
+  }
+  .item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+  
+  }
+  .item.active {
+    display: block;
+  }
+  
+  /* Tablet menu */
+  @media all and (min-width: 600px) {
+    .menu {
+      justify-content: center;
+    }
+    .logo {
+      flex: 1;
+    }
+    .toggle {
+      flex: 1;
+      text-align: right;
+    }
+    .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+    }
+    .toggle {
+      order: 2;
+    }
+    .button.secondary {
+      border: 0;
+    }
+    .button a {
+      padding: 7.5px 15px;
+      background: teal;
+      border: 1px #006d6d solid;
+    }
+    .button.secondary a {
+      background: transparent;
+    }
+    .button a:hover {
+      text-decoration: none;
+    }
+    .button:not(.secondary) a:hover {
+      background: #006d6d;
+      border-color: #005959;
+    }
+    .button.secondary a:hover {
+      color: #ddd;
+    }
+  }
+  /* Desktop menu */
+  @media all and (min-width: 900px) {
+    .item {
+      display: block;
+      width: auto;
+    }
+    .toggle {
+      display: none;
+    }
+    .logo {
+      order: 0;
+    }
+    .item {
+      order: 1;
+    }
+    .button {
+      order: 2;
+    }
+    .menu li {
+      padding: 15px 10px;
+    }
+    .menu li.button {
+      padding-right: 0;
+    }
+  }
+
+
+
+
+
+
+/* Footer  */
+.bgFooter {
+  width:100%;
+  margin:0 auto;
+  background-color: #a5d351;
+  position: relative;
+  clear: both;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+
+.TituloFooter {
+  text-align: left;
+  font-family: "Georgia";
+  padding-left: 20px;
+}
+
+.listFooter {
+  text-align: left;
+  padding-top: 15px;
+}
+
+i {
+  font-size: 25px;
+}
+
+.linkFooter {
+  color:rgb(43, 43, 43);
+  font-family: "Georgia";
+  font-weight: lighter;
+}
+
+/* Copyright */
+.footer-minimal .rights {
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer-minimal * + .rights {
+  padding: 50px 0px 10px;
+}
+p.rights {
+  font-size: 14px;
+  color: rgba(21, 21, 21, 0.8);
+  font-family: "Poppins", sans-serif;
+  padding-top: 40px;
+}
