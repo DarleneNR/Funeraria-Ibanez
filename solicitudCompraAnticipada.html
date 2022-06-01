@@ -14,10 +14,10 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         
-        <link rel="stylesheet" href="./CSS/compraAnticipada.css" type="text/css">
+        <link rel="stylesheet" href="./CSS/solicitudCompraAnticipada.css" type="text/css">
         <link rel="icon" type="image/x-icon" href="./IMG/LogoOriginal.png">
 
-        <title>Funeraria Ibañez | Compra Anticipada </title>
+        <title>Funeraria Ibañez | Solicitud de Servicio </title>
     </head>
     <body>
         <!-- Barra de menú responsiva -->
@@ -34,7 +34,7 @@
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Nuestros Servicios</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="nuestrosServicios.html">Tipos de Servicios</a></li>
-                <li><a class="dropdown-item" href="#">Compra Anticipada</a></li>
+                <li><a class="dropdown-item" href="compraAnticipada.html">Compra Anticipada</a></li>
                 <li><a class="dropdown-item" href="#">Servicios de Asesoría</a></li>
               </ul>
             </li>
@@ -48,26 +48,52 @@
         </nav>
         <!-- Fin Barra de menú responsiva -->
 
-        <!-- Información -->
-        <div class="container-fluid" id="bgInformacionCA">
-            <h1 id="tituloInfo">Compra Anticipada</h1>
-            <p class="textoCA">
-                EL servicio de compra anticipada es la contratación de un <em>servicio funerario por anticipado</em>. Es decir,
-                usted puede preparar con tiempo todos los preparativos de un funeral. Son muchos los trámites que se debe realizar 
-                y esto puede abrumar, es por eso que en algunos casos es preferible realizar estos trámites y asegurar el servicio 
-                funerario antes del acontecimineto.<br>
-                <strong>Este servicio consta con garantías y seguridad</strong>.<br><br>
-                Si deseas consultar o contratar este servicio contáctanos rápidamente haciendo click en el siguiente botón.
-            </p>
-            <!-- Boton -->
-            <p style="text-align: center;">
-                <a href="solicitudCompraAnticipada.html">
-                    <label style="cursor:pointer; border-radius: 5px; background: rgb(33 37 41); height:44px; color: white; width: 180px; text-align: center; font-size: 17px; padding: 10px 0;">
-                        Solicitar Servicio
-                    </label>
-                </a>
-            </p>
+        <!-- Formulario de Solicitud de Servicio -->
+        <div class="container-fluid" id="bgSolicitud">
+            <h1 id="tituloSolicitud">Solicita compra anticipada aquí</h1>
+            <div class="container-fluid row">
+                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+
+                    <!-- Formulario de Contacto -->
+                    <form class="form-horizontal" class="contacto" name="contacto" id ="contacto" method="post" action="formSolicitudServicio.php">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="name" class="control-label">Nombre completo</label>
+                                <input id="name" name="name" type="text" placeholder="Nombre(s) y Apellidos" class="form-control" minlength="7" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="email" class="control-label">Correo electr&oacute;nico</label>
+                                <input id="email" name="email" type="email" placeholder="Email" class="form-control" required>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="phone" class="control-label">Teléfono</label>
+                                <input id="phone" name="phone" type="number" placeholder="987 654 321" class="form-control" minlength="9">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="compraAnticipada" class="control-label">Tipo de Servicio</label><br>  
+                                <input type="checkbox" id="compraAnticipada" name="compraAnticipada" value="Compra Anticipada" checked disabled>
+                                <label for="compraAnticipada">Compra Anticipada</label>
+                            </div>
+                        </div>
+                        <br><br>
+                        <label for="message" class="control-label">Mensaje</label>
+                        <textarea class="form-control" id="message" name="message" placeholder="Escríbe tu mensaje para nosotros aquí." rows="5" required></textarea>
+                        <br>
+                        <p style="text-align: center;">
+                            <input id="submit" name="submit" type="submit" value="Enviar">
+                        </p>
+                    </form>
+                    <!-- Fin Formulario de Solicitud de Servicio -->
+
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            </div>
         </div>
+
 
         <!-- Footer  -->
         <footer>
@@ -116,13 +142,13 @@
 
     </body>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>-->
     <script src="https://kit.fontawesome.com/5ea815c1d0.js"></script>
     <!-- Validación con librerias -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <!-- Menú responsivo -->
-    <script type="text/javascript" src="./JS/compraAnticipada.js"></script>
+    <script type="text/javascript" src="./JS/solicitudCompraAnticipada.js"></script>
 
 </html>
