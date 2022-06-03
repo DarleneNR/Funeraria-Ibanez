@@ -168,6 +168,7 @@
     }
   }
 
+/* Información */
 #bgInformacionCA {
     background-image: url(../IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
     padding-top: 5%;
@@ -180,9 +181,6 @@
 .textoCA {
     padding: 50px 50px;
 }
-
-
-
 
 /* Footer  */
 .bgFooter {
