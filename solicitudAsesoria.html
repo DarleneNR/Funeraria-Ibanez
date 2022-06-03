@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
         
-        <link rel="stylesheet" href="./CSS/asesorias.css" type="text/css">
+        <link rel="stylesheet" href="./CSS/solicitudAsesoria.css" type="text/css">
         <link rel="icon" type="image/x-icon" href="./IMG/LogoOriginal.png">
 
         <title>Funeraria Ibañez | Atención 24 horas </title>
@@ -58,76 +58,55 @@
         </nav>
         <!-- Fin Barra de menú responsiva -->
 
-        <!-- Asesoría Legal -->
-        <div class="container-fluid bgAsesorias"  style="margin-top: -16px; border-bottom: 2px #2b2b2b solid;">
-          <h1 class="tituloAsesoria">Asesoría Legal</h1>
-          <div class="container-fluid infoAsesoria">
-            <h4 style="padding-top: 40px;" class="subTituloAsesoria">En nuestro servicio de asesoría legal ofrecemos:</h4>
-            <ul>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Orientación Legal<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Trámites en Registro Legal<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Certificado de Defunción<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Cuota Mortuoia<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Otros trámites<li>
-            </ul>
-          </div>
-          <!-- Boton -->
-          <p style="text-align: center; padding-bottom: 30px;">
-            <a href="solicitudAsesoria.html">
-              <label style="cursor:pointer; border-radius: 5px; background: rgb(33 37 41); height:44px; color: white; width: 180px; text-align: center; font-size: 17px; padding: 10px 0;">
-                Solicitar Servicio
-              </label>
-            </a>
-          </p>
-        </div>
-        <!-- Fin Asesoría Legal -->
+        <!-- Formulario de Solicitud de Servicio -->
+        <div class="container-fluid" id="bgSolicitud">
+            <h1 id="tituloSolicitud">Solicita nuestra asesoría aquí</h1>
+            <div class="container-fluid row">
+                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
 
-        <!-- Asesoría de Cremación -->
-        <div class="container-fluid bgAsesorias" style="border-bottom: 2px #2b2b2b solid;">
-          <h1 class="tituloAsesoria">Asesoría de Cremación</h1>
-          <div class="container-fluid infoAsesoria">
-            <h4 style="padding-top: 40px;" class="subTituloAsesoria">Proceso de cremación:</h4>
-            <ul>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Retiro de cuerpo del hospital o de la casa habitación<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Se solicita el acta de defunción y cédula de los involucrados<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Certificado de Defunción<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Un familiar firma la autorización de cremación<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Traslado del cuerpo al crematorio<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Entrega de ánfora<li></li>
-            </ul>
-          </div>
-          <!-- Boton -->
-          <p style="text-align: center; padding-bottom: 30px;">
-            <a href="solicitudAsesoria.html">
-              <label style="cursor:pointer; border-radius: 5px; background: rgb(33 37 41); height:44px; color: white; width: 180px; text-align: center; font-size: 17px; padding: 10px 0;">
-                Solicitar Servicio
-              </label>
-            </a>
-          </p>
-        </div>
-        <!-- Fin Asesoría de Cremación -->
+                    <!-- Formulario de Contacto -->
+                    <form class="form-horizontal" class="contacto" name="contacto" id ="contacto" method="post" action="formSolicitudServicio.php">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="name" class="control-label">Nombre completo</label>
+                                <input id="name" name="name" type="text" placeholder="Nombre(s) y Apellidos" class="form-control" minlength="7" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="email" class="control-label">Correo electr&oacute;nico</label>
+                                <input id="email" name="email" type="email" placeholder="Email" class="form-control" required>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="phone" class="control-label">Teléfono</label>
+                                <input id="phone" name="phone" type="number" placeholder="987 654 321" class="form-control" minlength="9">
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <label for="servicio" class="control-label">Tipo de Asesoría</label>                                   
+                                <select class="form-select" name="tipoServicio" id="tipoServicio">
+                                    <option value="Servicio Standard">Asesoría Legal</option>
+                                    <option value="Servicio Tradicional">Asesoría de Cremación</option>
+                                    <option value="Servicio Premium">Asesoría de Sepultura</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br><br>
+                        <label for="message" class="control-label">Mensaje</label>
+                        <textarea class="form-control" id="message" name="message" placeholder="Escríbe tu mensaje para nosotros aquí." rows="5" required></textarea>
+                        <br>
+                        <p style="text-align: center;">
+                            <input id="submit" name="submit" type="submit" value="Enviar">
+                        </p>
+                    </form>
+                    <!-- Fin Formulario de Solicitud de Servicio -->
 
-        <!-- Asesoría de Sepultura -->
-        <div class="container-fluid bgAsesorias">
-          <h1 class="tituloAsesoria">Asesoría de Sepultura</h1>
-          <div class="container-fluid infoAsesoria">
-            <h4 style="padding-top: 40px;" class="subTituloAsesoria">En nuestro servicio de sepultura legal ofrecemos:</h4>
-            <ul>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Indicación de trámites a realizar<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Traslado del cuerpo al cementerio<li>
-              <li><i class="fas fa-angle-right"></i>&nbsp;&nbsp; Otras indicaciones<li>
-            </ul>
-          </div>
-          <!-- Boton -->
-          <p style="text-align: center; padding-bottom: 30px;">
-            <a href="solicitudAsesoria.html">
-              <label style="cursor:pointer; border-radius: 5px; background: rgb(33 37 41); height:44px; color: white; width: 180px; text-align: center; font-size: 17px; padding: 10px 0;">
-                Solicitar Servicio
-              </label>
-            </a>
-          </p>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+            </div>
         </div>
-        <!-- Fin Asesoría de Sepultura -->
+        <!-- Fin Formulario de Solicitud de Servicio -->
 
         <!-- Footer  -->
         <footer>
@@ -183,6 +162,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <!-- Menú responsivo -->
-    <script type="text/javascript" src="./JS/asesorias.js"></script>
+    <script type="text/javascript" src="./JS/solicitudAsesoria.js"></script>
 
 </html>

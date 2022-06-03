@@ -168,27 +168,30 @@
     }
 }
 
-/* Asesorías */
-.bgAsesorias {
-    background-image: url(../IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
-    padding-top: 5%;
+/* Formulario de Solicitud */
+#bgSolicitud {
+  background-image: url(../IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
+  padding-top: 5%;
+  padding-bottom: 9%;
+  margin-top: -16px;
 }
 
-.tituloAsesoria {
-    text-align: center;
-    font-family: "Georgia";
+#tituloSolicitud {
+  text-align: center;
+  padding-bottom: 40px;
+  font-family: "Georgia";
 }
 
-.subTituloAsesoria, ul>li {
-    font-family: "Georgia";
+#submit{
+  border-radius: 5px;
+  background: rgb(30, 33, 36);
+  height:44px; color: white;
+  width: 175px; text-align: center;
+  font-size: 17px;
+  padding: 10px 0;
+  border: none;
+  font-family: "Georgia";
 }
-
-.infoAsesoria {
-    padding-left: 10%;
-}
-
-
-
 
 /* Footer  */
 .bgFooter {
