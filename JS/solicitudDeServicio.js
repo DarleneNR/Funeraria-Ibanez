@@ -11,19 +11,10 @@ $(function() {
 });
 
 /* Capturando valor de select */
-$('#contacto').on('submit', function () {
-    var valueToSend = $('#tipoServicio').val();
-    $.ajax({
-      method: 'POST',
-      url: 'formSolicitudServicio.php',
-      data: {
-         myVal: valueToSend
-      },
-      success: function (data) {
-         console.log('Success: ' + data); // Este callback se lanza cuando la url 'myPage' responde con status 200.
-      },
-      error: function (data) {
-         console.log('Error: ' + data); // Este callback que se lanzara si la url 'myPage.php' responde con status de error, e.g. 400, 404, 500, etc...
-      }
+/* Capturando valor de select */
+$(document).ready(function() {
+    $('#tipoServicio').on('change', function() {
+      $('#submit').click();
+ 
     });
-  });
+ });

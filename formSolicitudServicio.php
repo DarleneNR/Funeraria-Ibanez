@@ -1,35 +1,131 @@
+<!-- Validación de campos -->
 <?php
-if(isset($_POST['email'])) {
+	if (
+        empty($_POST['name']) || 
+	    empty($_POST['phone']) ||
+	    empty($_POST["tipoServicio"]) ||
+        empty($_POST['message']) ||
+        !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)
+    ){
+	    if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+	            echo "El correo que usted ingresó tiene un ";
+	        }
+	        if (empty($_POST['name'])){
+	            echo "El nombre que usted ingresó tiene un ";
+	        }
+	        if (empty($_POST['phone'])){
+	            echo "El telefono que usted ingresó tiene un ";
+	        }
+	        if (empty($_POST['myVal'])){
+	            echo "La opción de servicio que usted eligió tiene un  ";
+	        }
+            if (empty($_POST['message'])){
+	            echo "El mensaje que usted ingresó tiene un ";
+	        }
+	        echo "error";
+	    }
+	    else {
+	        $destino= "info@funerariaibanez.cl";
+	        $nombre = $_POST["name"];
+	        $correo = $_POST["email"];
+	        $telefono = $_POST["phone"];
+            $tipoServicio = $_POST["tipoServicio"];
+	        $mensaje = $_POST["message"];
+	        $contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nTipo de Servicio: " . $tipoServicio . "\nMensaje: " . $mensaje;
+            mail($destino, "Solicitud de Servicio", $contenido);
+	        echo "Solicitud Enviada";
+	    }
 
-// Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
-$email_to = "mdnr151201@gmail.com";
-$email_subject = "Contacto desde el sitio web";
-
-// Aquí se deberían validar los datos ingresados por el usuario
-if(!isset($_POST['name']) ||
-!isset($_POST['email']) ||
-!isset($_POST['phone']) ||
-!isset($_POST['myVal']) ||
-!isset($_POST['message'])) {
-
-echo "<b>Ocurrió un error y el formulario no ha sido enviado. </b><br />";
-echo "Por favor, vuelva atrás y verifique la información ingresada<br />";
-die();
-}
-
-$email_message = "Detalles del formulario de contacto:\n\n";
-$email_message .= "Nombre: " . $_POST['name'] . "\n";
-$email_message .= "E-mail: " . $_POST['email'] . "\n";
-$email_message .= "Teléfono: " . $_POST['phone'] . "\n";
-$email_message .= "Tipo de Servicio a Consultar: " . $_POST['myVal'] . "\n";
-$email_message .= "Mensaje: " . $_POST['message'] . "\n\n";
-
-// Ahora se envía el e-mail usando la función mail() de PHP
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);
-
-echo "¡El formulario se ha enviado con éxito!";
-}
+    function validarNombre() {
+        if (document.getElementById("nombre").value.indexOf(" ") !== -1) {
+            alert("La contraseña no puede contener espacios en blanco");
+            return false;
+        }
+        echo "El mensaje ha sido enviado correctamente";
+        header ("Location:index.html");
+    }
 ?>
+<!-- Fin Validación de campos -->
+
+<!-- Mensaje de error -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Funeraria Iba&ntilde;ez</title>
+        <link rel="stylesheet" type="text/css" href="fContrato/formContrato/style.css">
+        <link rel="icon" type="image/x-icon" href="./IMG/LogoOriginal.png">
+    </head>
+    <body>
+        <div class="container-fluid" style ="text-align: center">
+            <form action="solicitudDeServicio.html" method="post">
+                <div><br>
+                    <button type="button" class="bt" onclick="location.href='solicitudDeServicio.html'">Volver</button>
+                </div>
+                <br>
+            </form>
+        </div>
+    </body>
+</html>
+<!-- Fin Mensaje de error -->
+
+<!-- Envío de solicitud -->
+<?php
+    /* $nombre = $_POST['nombre'];
+    $correo = $_POST['correo'];
+    $telefono = $_POST['telefono'];
+    $mensaje = $_POST['mensaje']; */
+
+    $nombre = $_POST["name"];
+	$correo = $_POST["email"];
+	$telefono = $_POST["phone"];
+    $tipoServicio = $_POST["tipoServicio"];
+	$mensaje = $_POST["message"];
+
+    $body = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nTipo de Servicio: " . $tipoServicio . "\nMensaje: " . $mensaje;
+
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'PHPMailer/Exception.php';
+    require 'PHPMailer/PHPMailer.php';
+    require 'PHPMailer/SMTP.php';
+
+    $mail = new PHPMailer(true);
+
+    try {
+        //Server settings
+        $mail->SMTPDebug = 0;                      // Enable verbose debug output
+        $mail->isSMTP();                                            // Send using SMTP
+        $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+        $mail->Username   = 'sadnibbawitdreams@gmail.com';                     // SMTP username
+        $mail->Password   = '13042020';                               // SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+        $mail->Port       = 587;                                    // TCP port to connect to
+
+        //Recipients
+        $mail->setFrom('sadnibbawitdreams@gmail.com', $nombre);
+        $mail->addAddress('info@funerariaibanez.cl', 'Funeraria');     // Add a recipient
+    
+        // Attachments
+    // Optional name
+
+        // Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = 'Solicitud de Servicio';
+        $mail->Body    = $body;
+    
+
+        $mail->send();
+        echo '<script>
+            alert("El mensaje se envió correctamente");
+            window.history.go(-1);
+            <\script>';
+
+    } catch (Exception $e) {
+            echo 'No se pudo enviar el mensaje: ' , $mail->ErrorInfo;
+    }
+
+    header('Location: index.html');
+?>
+<!-- Fin Envío de solicitud -->
