@@ -172,7 +172,8 @@
 .bgAsesorias {
     background-image: url(../IMG/Background.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; width: 100%;
     padding-top: 5%;
-}
+    padding-bottom: 0%;
+  }
 
 .tituloAsesoria {
     text-align: center;
@@ -186,9 +187,6 @@
 .infoAsesoria {
     padding-left: 10%;
 }
-
-
-
 
 /* Footer  */
 .bgFooter {
