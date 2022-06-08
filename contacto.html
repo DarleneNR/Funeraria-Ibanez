@@ -61,14 +61,32 @@
         <div class="container-fluid row">
           <!-- Formulario de Contacto -->
           <div class="col-md-8 col-sm-8 col-xs-8">
-            <div id="tituloFormContacto">
-              <h1>Escríbenos</h1>
-              <p>Completa el siguiente formulario y <strong>nos contactaremos a la brevedad con usted.</strong></p>
-            </div>
             <div id="camposForm">
+              <div id="tituloFormContacto">
+                <h1>Escríbenos</h1>
+                <p>Completa el siguiente formulario y <strong>nos contactaremos a la brevedad con usted.</strong></p>
+              </div>
 
+              <!-- Formulario de Contacto -->
+              <form class="form-horizontal" class="formContacto" name="formContacto" action="" method="post">
+                <label for="name" class="control-label">Nombre completo</label>
+                <input id="name" name="name" type="text" placeholder="Nombre(s) y Apellidos" class="form-control" minlength="7" required>
+                <br>
+                <label for="email" class="control-label">Correo electr&oacute;nico</label>
+                <input id="email" name="email" type="email" placeholder="Email" class="form-control" required>
+                <br>
+                <label for="phone" class="control-label">Teléfono</label>
+                <input id="phone" name="phone" type="number" placeholder="987 654 321" class="form-control" minlength="9">
+                <br>
+                <label for="message" class="control-label">Mensaje</label>
+                <textarea class="form-control" id="message" name="message" placeholder="Introduzca su mensaje para nosotros aquí." rows="5" required></textarea>
+                <br>
+                <p style="text-align: center;">
+                  <input id="submit" name="submit" type="submit" value="Enviar">
+                </p>
+              </form>
+              <!-- Fin Formulario de Contacto -->
             </div>
-            
           </div>
 
           <!-- Datos de Ubicación -->
