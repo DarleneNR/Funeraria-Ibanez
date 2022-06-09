@@ -176,6 +176,11 @@
   margin-top: -16px;
 }
 
+.control-label{
+  text-align: center;
+  font-family: "Georgia";
+}
+
 #tituloFormContacto {
   text-align: center;
   padding-bottom: 40px;
@@ -197,6 +202,11 @@
   padding: 50px;
   border-style: dashed;
   border-radius: 25px;
+  border-color: #d4d4d4;
+}
+
+#infoContacto {
+  padding-left: 30px;
 }
 
 .titulo2 {
@@ -211,7 +221,6 @@
   font-family: "Georgia";
   font-size: large;
 }
-
 
 /* Footer  */
 .bgFooter {

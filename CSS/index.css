@@ -281,7 +281,7 @@ transform:scale(1.13);
 /* Formulario de Contacto */
 .control-label{
   text-align: center;
-  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: "Georgia";
 }
 
 #submit{
