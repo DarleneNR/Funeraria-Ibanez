@@ -180,7 +180,6 @@
   text-align: center;
   padding-bottom: 40px;
   font-family: "Georgia";
-  padding-top: 50px;
 }
 
 #submit{
@@ -195,10 +194,23 @@
 }
 
 #camposForm {
-  padding-bottom: 50px;
+  padding: 50px;
   border-style: dashed;
+  border-radius: 25px;
 }
 
+.titulo2 {
+  font-family: "Georgia";
+  font-weight: bold;
+  font-size: large;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.infoTitulo2 {
+  font-family: "Georgia";
+  font-size: large;
+}
 
 
 /* Footer  */
