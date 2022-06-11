@@ -9,3 +9,11 @@ $(function() {
         }
     });
 });
+
+/* Capturando valor de select */
+$(document).ready(function() {
+    $('#tipoAsesoria').on('change', function() {
+      $('#submit').click();
+ 
+    });
+ });

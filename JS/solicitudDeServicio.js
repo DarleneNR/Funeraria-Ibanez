@@ -11,7 +11,6 @@ $(function() {
 });
 
 /* Capturando valor de select */
-/* Capturando valor de select */
 $(document).ready(function() {
     $('#tipoServicio').on('change', function() {
       $('#submit').click();

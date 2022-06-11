@@ -3,7 +3,7 @@
 	if (
         empty($_POST['name']) || 
 	    empty($_POST['phone']) ||
-	    empty($_POST["tipoServicio"]) ||
+	    empty($_POST["tipoAsesoria"]) ||
         empty($_POST['message']) ||
         !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)
     ){
@@ -29,10 +29,10 @@
 	        $nombre = $_POST["name"];
 	        $correo = $_POST["email"];
 	        $telefono = $_POST["phone"];
-            $tipoServicio = $_POST["tipoServicio"];
+            $tipoAsesoria = $_POST["tipoAsesoria"];
 	        $mensaje = $_POST["message"];
-	        $contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nTipo de Servicio: " . $tipoServicio . "\nMensaje: " . $mensaje;
-            mail($destino, "Solicitud de Servicio", $contenido);
+	        $contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nTipo de Asesoría: " . $tipoAsesoria . "\nMensaje: " . $mensaje;
+            mail($destino, "Solicitud de Asesoría", $contenido);
 	        echo "Solicitud Enviada";
 	    }
 
@@ -57,9 +57,9 @@
     </head>
     <body>
         <div class="container-fluid" style ="text-align: center">
-            <form action="solicitudDeServicio.html" method="post">
+            <form action="solicitudAsesoria.html" method="post">
                 <div><br>
-                    <button type="button" class="bt" onclick="location.href='solicitudDeServicio.html'">Volver</button>
+                    <button type="button" class="bt" onclick="location.href='solicitudAsesoria.html'">Volver</button>
                 </div>
                 <br>
             </form>
@@ -74,10 +74,10 @@
     $nombre = $_POST["name"];
 	$correo = $_POST["email"];
 	$telefono = $_POST["phone"];
-    $tipoServicio = $_POST["tipoServicio"];
+    $tipoAsesoria = $_POST["tipoAsesoria"];
 	$mensaje = $_POST["message"];
 
-    $body = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nTipo de Servicio: " . $tipoServicio . "\nMensaje: " . $mensaje;
+    $body = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nTipo de Asesoría: " . $tipoAsesoria . "\nMensaje: " . $mensaje;
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
@@ -108,7 +108,7 @@
 
         // Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = 'Solicitud de Servicio';
+        $mail->Subject = 'Solicitud de Asesoría';
         $mail->Body    = $body;
     
 
