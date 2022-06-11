@@ -57,59 +57,59 @@
           </ul>
         </nav>
         <!-- Fin Barra de menú responsiva -->
-
-        <div class="container-fluid row" style="padding-top: 50px; padding-bottom: 50px;">
-          <!-- Formulario de Contacto -->
-          <div class="col-md-8 col-sm-8 col-xs-8">
-            <div id="camposForm">
-              <div id="tituloFormContacto">
-                <h1>Escríbenos</h1>
-                <p>Completa el siguiente formulario y <strong>nos contactaremos a la brevedad con usted.</strong></p>
+        <div class="container-fluid bgFormularioC">
+          <div class="row" id="bgFormularioC">
+            <!-- Formulario de Contacto -->
+            <div class="col-md-8 col-sm-8 col-xs-8">
+              <div id="camposForm">
+                <div id="tituloFormContacto">
+                  <h1>Escríbenos</h1>
+                  <p>Completa el siguiente formulario y <strong>nos contactaremos a la brevedad con usted.</strong></p>
+                </div>
+                <!-- Formulario de Contacto -->
+                <form class="form-horizontal" class="formContacto" name="formContacto" action="formContacto.php" method="post">
+                  <label for="name" class="control-label">Nombre completo</label>
+                  <input id="name" name="name" type="text" placeholder="Nombre(s) y Apellidos" class="form-control" minlength="7" required>
+                  <br>
+                  <label for="email" class="control-label">Correo electr&oacute;nico</label>
+                  <input id="email" name="email" type="email" placeholder="Email" class="form-control" required>
+                  <br>
+                  <label for="phone" class="control-label">Teléfono</label>
+                  <input id="phone" name="phone" type="number" placeholder="987 654 321" class="form-control" minlength="9">
+                  <br>
+                  <label for="message" class="control-label">Mensaje</label>
+                  <textarea class="form-control" id="message" name="message" placeholder="Introduzca su mensaje para nosotros aquí." rows="5" required></textarea>
+                  <br>
+                  <p style="text-align: center;">
+                    <input id="submit" name="submit" type="submit" value="Enviar">
+                  </p>
+                </form>
+                <!-- Fin Formulario de Contacto -->
               </div>
-              <!-- Formulario de Contacto -->
-              <form class="form-horizontal" class="formContacto" name="formContacto" action="formContacto.php" method="post">
-                <label for="name" class="control-label">Nombre completo</label>
-                <input id="name" name="name" type="text" placeholder="Nombre(s) y Apellidos" class="form-control" minlength="7" required>
-                <br>
-                <label for="email" class="control-label">Correo electr&oacute;nico</label>
-                <input id="email" name="email" type="email" placeholder="Email" class="form-control" required>
-                <br>
-                <label for="phone" class="control-label">Teléfono</label>
-                <input id="phone" name="phone" type="number" placeholder="987 654 321" class="form-control" minlength="9">
-                <br>
-                <label for="message" class="control-label">Mensaje</label>
-                <textarea class="form-control" id="message" name="message" placeholder="Introduzca su mensaje para nosotros aquí." rows="5" required></textarea>
-                <br>
-                <p style="text-align: center;">
-                  <input id="submit" name="submit" type="submit" value="Enviar">
-                </p>
-              </form>
-              <!-- Fin Formulario de Contacto -->
+            </div>
+
+            <!-- Datos de telefono y dirección -->
+            <div class="col-md-4 col-sm-4 col-xs-4" id="infoContacto">
+              <h4 class="titulo2">Llámanos</h4>
+              <a class="linkFooter" href="tel:+56225053730">
+                <span class="infoTitulo2"><i class="fas fa-phone-alt"></i>&nbsp;(2)25 053 730</span>
+              </a><br><br>
+              <a class="linkFooter" href="https://api.whatsapp.com/send?phone=56991443374">
+                <span class="infoTitulo2"><i class="fab fa-whatsapp"></i>&nbsp;+56 991 443 374</span>
+              </a>
+              <br>
+              <h4 class="titulo2">Visítanos</h4>
+              <a class="linkFooter" href="https://goo.gl/maps/2cLdjfd918MkYNxU8" target="_blank">
+                <span class="infoTitulo2"><i class="fas fa-map-pin"></i>&nbsp;Avenida Santa Rosa 9492, Local 1</span>
+              </a>
+              <br>
+              <h4 class="titulo2">Cobertura de nuestros servicios</h4>
+              <span class="infoTitulo2"><i class="fas fa-map"></i>&nbsp;Funeraria Ibañez realiza sus operaciones en</span><br><br>
+              <span class="infoTitulo2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; la Región Metropolitana de Santiago de</span><br><br>
+              <span class="infoTitulo2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chile.</span>
             </div>
           </div>
-
-          <!-- Datos de telefono y dirección -->
-          <div class="col-md-4 col-sm-4 col-xs-4" id="infoContacto">
-            <h4 class="titulo2">Llámanos</h4>
-            <a class="linkFooter" href="tel:+56225053730">
-              <span class="infoTitulo2"><i class="fas fa-phone-alt"></i>&nbsp;(2)25 053 730</span>
-            </a><br><br>
-            <a class="linkFooter" href="https://api.whatsapp.com/send?phone=56991443374">
-              <span class="infoTitulo2"><i class="fab fa-whatsapp"></i>&nbsp;+56 991 443 374</span>
-            </a>
-            <br>
-            <h4 class="titulo2">Visítanos</h4>
-            <a class="linkFooter" href="https://goo.gl/maps/2cLdjfd918MkYNxU8" target="_blank">
-              <span class="infoTitulo2"><i class="fas fa-map-pin"></i>&nbsp;Avenida Santa Rosa 9492, Local 1</span>
-            </a>
-            <br>
-            <h4 class="titulo2">Cobertura de nuestros servicios</h4>
-            <span class="infoTitulo2"><i class="fas fa-map"></i>&nbsp;Funeraria Ibañez realiza sus operaciones en</span><br><br>
-            <span class="infoTitulo2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; la Región Metropolitana de Santiago de</span><br><br>
-            <span class="infoTitulo2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chile.</span>
-          </div>
         </div>
-        
         <!-- Footer  -->
         <footer>
           <div class="container-fluid row bgFooter">
