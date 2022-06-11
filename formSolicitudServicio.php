@@ -52,7 +52,7 @@
 <html>
     <head>
         <title>Funeraria Iba&ntilde;ez</title>
-        <link rel="stylesheet" type="text/css" href="fContrato/formContrato/style.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/notificacionMensaje.css">
         <link rel="icon" type="image/x-icon" href="./IMG/LogoOriginal.png">
     </head>
     <body>
