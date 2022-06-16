@@ -204,6 +204,23 @@
 
 /* Fin Valoracion */
 
+/* Listado de testimonios */
+.listadoTestimonio {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#tituloTest {
+  padding-top:80px; 
+  padding-bottom: 50px;
+  font-family: "Georgia";
+}
+
+.card {
+  font-family: "Georgia";
+  padding: 40px;
+}
+
 #submit {
     border-radius: 5px;
     background: rgb(30, 33, 36);
@@ -215,9 +232,10 @@
     font-family: "Georgia";
 }
 
-
-
-
+.estrellas-valor {
+  font-size: xx-large;
+  color: rgb(228, 224, 10);;
+}
 
 /* Footer  */
 .bgFooter {
