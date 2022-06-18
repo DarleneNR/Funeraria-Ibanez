@@ -56,8 +56,8 @@
     <body>
         <div class="container-fluid" style ="text-align: center">
             <form action="contacto.html" method="post">
-                <div><br>
-                    <button type="button" class="bt" onclick="location.href='contacto.html'">Volver</button>
+                <div class="card">
+                    <button type="button" class="submit" id="submit" onclick="location.href='contacto.html'">Volver</button>
                 </div>
                 <br>
             </form>
