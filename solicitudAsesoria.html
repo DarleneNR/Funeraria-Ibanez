@@ -96,6 +96,11 @@
                         <label for="message" class="control-label">Mensaje</label>
                         <textarea class="form-control" id="message" name="message" placeholder="Escríbe tu mensaje para nosotros aquí." rows="5" required></textarea>
                         <br>
+                        <!-- Captcha -->
+                        <div style="text-align: center;">
+                          <div class="h-captcha" data-sitekey="ba02a70d-b542-4bb6-b720-b357cffe5d25"></div>
+                        </div>
+                        <br>
                         <p style="text-align: center;">
                             <input id="submit" name="submit" type="submit" value="Enviar">
                         </p>
@@ -163,5 +168,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <!-- Menú responsivo -->
     <script type="text/javascript" src="./JS/solicitudAsesoria.js"></script>
-
+    <!-- Captcha -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 </html>

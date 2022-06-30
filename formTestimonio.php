@@ -1,38 +1,52 @@
 <!-- Validación de campos -->
 <?php
-	if (
-        empty($_POST['name']) || 
-	    empty($_POST['estrellas']) ||
-        empty($_POST['message'])
-    ){
-	    if (empty($_POST['name'])){
-	        echo "El nombre que usted ingresó tiene un ";
-	    }
-	    if (empty($_POST['estrellas'])){
-	        echo "La valoración que usted ingresó tiene un ";
-	    }
-	    if (empty($_POST['message'])){
-	        echo "El mensaje que usted ingresó tiene un  ";
-	    }
-	    echo "error";
-	    }
-	    else {
-	        $destino= "info@funerariaibanez.cl";
-	        $nombre = $_POST["name"];
-	        $valoracion = $_POST["estrellas"];
-	        $mensaje = $_POST["message"];
-	        $contenido = "Nombre: " . $nombre . "\nValoración: " . $valoracion . " estrellas. \nMensaje: " . $mensaje;
-            mail($destino, "Contacto", $contenido);
-	        echo "Mensaje Enviado";
-	    }
 
-    function validarNombre() {
-        if (document.getElementById("nombre").value.indexOf(" ") !== -1) {
-            alert("La contraseña no puede contener espacios en blanco");
-            return false;
+    /* Validacion del captcha */
+    require('./Captcha.php');
+
+    $captcha = new Captcha();
+    
+    if($captcha->checkCaptcha($_POST['h-captcha-response'])) {
+    
+        /* Validación de campos */
+        if (
+            empty($_POST['name']) || 
+            empty($_POST['estrellas']) ||
+            empty($_POST['message'])
+        ){
+            if (empty($_POST['name'])){
+                echo "El nombre que usted ingresó tiene un ";
+            }
+            if (empty($_POST['estrellas'])){
+                echo "La valoración que usted ingresó tiene un ";
+            }
+            if (empty($_POST['message'])){
+                echo "El mensaje que usted ingresó tiene un  ";
+            }
+            echo "error";
+            }
+            else {
+                $destino= "info@funerariaibanez.cl";
+                $nombre = $_POST["name"];
+                $valoracion = $_POST["estrellas"];
+                $mensaje = $_POST["message"];
+                $contenido = "Nombre: " . $nombre . "\nValoración: " . $valoracion . " estrellas. \nMensaje: " . $mensaje;
+                mail($destino, "Contacto", $contenido);
+                echo "Mensaje Enviado";
+            }
+
+        function validarNombre() {
+            if (document.getElementById("nombre").value.indexOf(" ") !== -1) {
+                alert("La contraseña no puede contener espacios en blanco");
+                return false;
+            }
+            echo "El mensaje ha sido enviado correctamente";
+            header ("Location:index.html");
         }
-        echo "El mensaje ha sido enviado correctamente";
-        header ("Location:index.html");
+    
+    /* Mensaje de error en el captcha */
+    } else {
+        echo "Captcha incorrecto";
     }
 ?>
 <!-- Fin Validación de campos -->
@@ -46,10 +60,10 @@
         <link rel="icon" type="image/x-icon" href="./IMG/LogoOriginal.png">
     </head>
     <body>
-        <div class="container-fluid" style ="text-align: center">
+    <div class="container-fluid" style ="text-align: center">
             <form action="contacto.html" method="post">
-                <div><br>
-                    <button type="button" class="bt" onclick="location.href='testimonios.html'">Volver</button>
+                <div class="card">
+                    <button type="button" class="submit" id="submit" onclick="location.href='testimonios.html'">Volver</button>
                 </div>
                 <br>
             </form>

@@ -1,48 +1,62 @@
 <!-- Validación de campos -->
 <?php
-	if (
-        empty($_POST['name']) || 
-	    empty($_POST['phone']) ||
-	    empty($_POST["tipoAsesoria"]) ||
-        empty($_POST['message']) ||
-        !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)
-    ){
-	    if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
-	            echo "El correo que usted ingresó tiene un ";
-	        }
-	        if (empty($_POST['name'])){
-	            echo "El nombre que usted ingresó tiene un ";
-	        }
-	        if (empty($_POST['phone'])){
-	            echo "El telefono que usted ingresó tiene un ";
-	        }
-	        if (empty($_POST['myVal'])){
-	            echo "La opción de servicio que usted eligió tiene un  ";
-	        }
-            if (empty($_POST['message'])){
-	            echo "El mensaje que usted ingresó tiene un ";
-	        }
-	        echo "error";
-	    }
-	    else {
-	        $destino= "info@funerariaibanez.cl";
-	        $nombre = $_POST["name"];
-	        $correo = $_POST["email"];
-	        $telefono = $_POST["phone"];
-            $tipoAsesoria = $_POST["tipoAsesoria"];
-	        $mensaje = $_POST["message"];
-	        $contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nTipo de Asesoría: " . $tipoAsesoria . "\nMensaje: " . $mensaje;
-            mail($destino, "Solicitud de Asesoría", $contenido);
-	        echo "Solicitud Enviada";
-	    }
 
-    function validarNombre() {
-        if (document.getElementById("nombre").value.indexOf(" ") !== -1) {
-            alert("La contraseña no puede contener espacios en blanco");
-            return false;
+    /* Validacion del captcha */
+    require('./Captcha.php');
+
+    $captcha = new Captcha();
+    
+    if($captcha->checkCaptcha($_POST['h-captcha-response'])) {
+    
+        /* Validación de campos */
+        if (
+            empty($_POST['name']) || 
+            empty($_POST['phone']) ||
+            empty($_POST["tipoAsesoria"]) ||
+            empty($_POST['message']) ||
+            !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)
+        ){
+            if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+                    echo "El correo que usted ingresó tiene un ";
+                }
+                if (empty($_POST['name'])){
+                    echo "El nombre que usted ingresó tiene un ";
+                }
+                if (empty($_POST['phone'])){
+                    echo "El telefono que usted ingresó tiene un ";
+                }
+                if (empty($_POST['myVal'])){
+                    echo "La opción de servicio que usted eligió tiene un  ";
+                }
+                if (empty($_POST['message'])){
+                    echo "El mensaje que usted ingresó tiene un ";
+                }
+                echo "error";
+            }
+            else {
+                $destino= "info@funerariaibanez.cl";
+                $nombre = $_POST["name"];
+                $correo = $_POST["email"];
+                $telefono = $_POST["phone"];
+                $tipoAsesoria = $_POST["tipoAsesoria"];
+                $mensaje = $_POST["message"];
+                $contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nTipo de Asesoría: " . $tipoAsesoria . "\nMensaje: " . $mensaje;
+                mail($destino, "Solicitud de Asesoría", $contenido);
+                echo "Solicitud Enviada";
+            }
+
+        function validarNombre() {
+            if (document.getElementById("nombre").value.indexOf(" ") !== -1) {
+                alert("La contraseña no puede contener espacios en blanco");
+                return false;
+            }
+            echo "El mensaje ha sido enviado correctamente";
+            header ("Location:index.html");
         }
-        echo "El mensaje ha sido enviado correctamente";
-        header ("Location:index.html");
+    
+    /* Mensaje de error en el captcha */
+    } else {
+        echo "Captcha incorrecto";
     }
 ?>
 <!-- Fin Validación de campos -->
@@ -56,10 +70,10 @@
         <link rel="icon" type="image/x-icon" href="./IMG/LogoOriginal.png">
     </head>
     <body>
-        <div class="container-fluid" style ="text-align: center">
-            <form action="solicitudAsesoria.html" method="post">
-                <div><br>
-                    <button type="button" class="bt" onclick="location.href='solicitudAsesoria.html'">Volver</button>
+    <div class="container-fluid" style ="text-align: center">
+            <form action="contacto.html" method="post">
+                <div class="card">
+                    <button type="button" class="submit" id="submit" onclick="location.href='solicitudAsesoria.html'">Volver</button>
                 </div>
                 <br>
             </form>
